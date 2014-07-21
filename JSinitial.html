@@ -137,4 +137,16 @@
   } (2,3,4));
   
   console.log(sum);
+  
+  // nested function -> closeur
+  function add(){
+      var counter = 0;
+      function plus(){
+          counter += 1;
+      }
+      plus();
+      return counter;
+  }
+  
+  console.log(add());
 </script>
