@@ -126,10 +126,15 @@
   console.log(addNumbers(5,6));
   
   var addThreeNumbers = function()
-  { //var sum = num1 + num2;
-      return sum = arguments[0] + arguments[1] + arguments[2];
+  { 
+      return arguments[0] + arguments[1] + arguments[2];
   }
-
   console.log(addThreeNumbers(5,6,7));
+  
+  //self executing function
+  console.log(function(){
+     return arguments[0] + arguments[1] + arguments[2];
+  }(););
+  
   
 </script>
