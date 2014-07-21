@@ -64,5 +64,14 @@
    console.log(aVariable + anotherVariable);
    console.log(aStringVariable + anotherStringVariable);
    
+   try{
+   console.log(aStringVariable * anotherStringVariable);
+   console.log(typeof aStringVariable * anotherStringVariable);
+   }
+   catch(error){
+    console.log(typeof error);
+    console.log(error.name);
+    console.log(error.message);  
+   }
    
 </script>
