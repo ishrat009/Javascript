@@ -78,8 +78,15 @@
             {
                alert('I am running');
             };
-    //console.log(aCar.run());        
+   console.log(aCar.run());        
    
-   //defining Object using Object.create() method 
+   //defining Object using Object.create() method
+ 
+                
+   var Person = {
+            kind: 'human'
+                };
+     var sazia = Object.create(Person);           
+     console.log(sazia.kind);           
     
 </script>
