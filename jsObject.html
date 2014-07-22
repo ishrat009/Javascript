@@ -1,24 +1,24 @@
 <script>
-//Defining an object using Object
-var Car = new Object();
-Car.name = 'Audi';
-Car.wheel = 4;
-Car.drive = function()
+    //Defining an object using Object
+    var Car = new Object();
+    Car.name = 'Audi';
+    Car.wheel = 4;
+    Car.drive = function()
             {
                 console.log('I am driving');
-            }
-;
-//using the car object
-console.log(Car.wheel);
-Car.drive();
-console.log(typeof Car);
+            };
 
-//Object Literal
-//var fruits = {};
-var fruits = {
-        name: 'apple',
-        color: 'red',
-        taste: 'sweet',
+    //using the car object
+    console.log(Car.wheel);
+    Car.drive();
+    console.log(typeof Car);
+
+    //Object Literal
+    //var fruits = {};
+        var fruits = {
+                name: 'apple',
+                color: 'red',
+                taste: 'sweet',
         
         satisfy: function()
                 {
@@ -26,27 +26,27 @@ var fruits = {
                     return 'return'; // type string
                 }
             };
-console.log(typeof fruits);
-console.log(fruits.name);
-console.log(fruits['name']);
-console.log(fruits.satisfy());
-console.log(typeof fruits.satisfy());
+    console.log(typeof fruits);
+    console.log(fruits.name);
+    console.log(fruits['name']);
+    console.log(fruits.satisfy());
+    console.log(typeof fruits.satisfy());
 
-var student = {
-            name: 'bappa',
-            id: 'FTFL007',
-            email: 'bappa@ftfl.com',
-            tools: {
-                laptop: false,
-                desktop: {
-                    monitor: '17 inch',
-                    CPU: 'Cori5'
-                         }
-                    }
-             };
-//way of accessing element
-console.log(student.tools.desktop.monitor);
-console.log(student['tools']['desktop']['CPU']);
+    var student = {
+                name: 'bappa',
+                id: 'FTFL007',
+                email: 'bappa@ftfl.com',
+                    tools:{
+                    laptop: false,
+                    desktop: {
+                        monitor: '17 inch',
+                        CPU: 'Cori5'
+                             }
+                        }
+                 };
+    //way of accessing element
+    console.log(student.tools.desktop.monitor);
+    console.log(student['tools']['desktop']['CPU']);
 
     //Defining Object using a Constructor Function
     function Cars (make,model,year)
@@ -54,9 +54,19 @@ console.log(student['tools']['desktop']['CPU']);
      this.make = make;
      this.model = model;
      this.year =year;
-    }
+     this.drive= drive;
+    };
+    //defining Object Method externally
+    function drive()
+                    {
+                        return "I'm driving "+ this.make;
+                    }
     
     var myCar = new Cars("Eagle", "Talson", '1989');
+    var myCar2 = new Cars("Mazda", "Misamisa", '2008');
     console.log(typeof myCar);
     console.log(myCar.make);
+    console.log(myCar2.make);
+    console.log(myCar2.drive());
+    
 </script>
