@@ -138,10 +138,11 @@
   
   console.log(sum);
   
-  // nested function -> closeur
+  // nested function -> closure
   function add(){
       var counter = 0;
-      function plus(){
+      function plus() //it can inherit the variables of its parent function.
+      {
           counter += 1;
       }
       plus();
@@ -149,4 +150,12 @@
   }
   
   console.log(add());
+
+//default return from a function
+function aSampleFunction()
+{
+    
+}
+
+console.log(aSampleFunction());
 </script>
