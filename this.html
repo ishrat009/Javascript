@@ -1,6 +1,7 @@
 <script>
+    //"use strict"
     //alert(this);    
-    console.log(this);
+    console.log(this); //window
 
     var ftfl = {
            jahangir: function()
@@ -8,15 +9,15 @@
                return this;
            },
     };
-    var aFTFL = ftfl.jahangir();
+    //var aFTFL = ftfl.jahangir();
     console.log(ftfl.jahangir()); //ftfl
-    console.log(aFTFL);
+    //console.log(aFTFL);
     
-    ftfl.jahangir(); //as an Object method
-    ftfl['jahangir'](); //calling object method
+    var aFTFL = ftfl.jahangir;
+    console.log(aFTFL()); //here this refers to window
     
-    console.log(ftfl.jahangir());
-    console.log(ftfl['jahangir']());
+    //console.log(ftfl.jahangir()); //as an Object method
+    //console.log(ftfl['jahangir']()); //calling object method
     
     
 </script>
