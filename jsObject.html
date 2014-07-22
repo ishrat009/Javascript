@@ -78,15 +78,16 @@
             {
                alert('I am running');
             };
-   console.log(aCar.run());        
+   //console.log(aCar.run());        
    
    //defining Object using Object.create() method
- 
-                
+   var Person = {};              
    var Person = {
             kind: 'human'
                 };
-     var sazia = Object.create(Person);           
-     console.log(sazia.kind);           
+    var sazia = Object.create(Person, {age: {value: 13}});           
+    console.log(sazia.kind);           
+    console.log(sazia.age); //internal properties of sazia
+    
     
 </script>
