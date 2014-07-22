@@ -157,7 +157,22 @@
     These days we have <b>full ::before</b> and ::after <i>support, favour</i> using those instead.
     
 </div>
-
-
+<script>
+    ;(
+    function()
+    {
+        try {
+           var alABBR = window.document.getElementsByTagName('abbr');
+            console.log(alABBR);
+            }
+        catch(error)
+            {
+                console.log(error.message);
+            }
+    }
+     ) ();
+    
+    
+</script>
 </body>
 </html>
