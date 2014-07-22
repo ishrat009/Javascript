@@ -165,9 +165,18 @@
            var alABBR = window.document.getElementsByTagName('abbr');
            var total = alABBR.length;
             for(i=0; i<total;i++)
-                {
-                    console.log(alABBR[i].innerHTML);
+                {   //innerHTML w3 nonstandard
+                    //console.log(alABBR[i].innerHTML);
+                    //console.log(alABBR[i].nodeType);
+                    //console.log(alABBR[i].firstChild.nodeValue);
+                    console.log(alABBR[i].childNodes[0].nodeValue);
                 }
+                
+                var zenSummary = document.getElementById('zen-summary');
+                console.log(zenSummary.innerHTML);
+            zenSummary.innerHTML = "<h1>Hello I have replaced you. </h1>";
+            //zenSummary.setAttribute('style', 'background-color: green');
+            //zenSummary.setAttribute('style', 'display: none');
             }
         catch(error)
             {
