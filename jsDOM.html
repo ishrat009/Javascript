@@ -163,7 +163,9 @@
     {
         try {
            var alABBR = window.document.getElementsByTagName('abbr');
+           document.getElementsByTagName('abbr');
            var total = alABBR.length;
+           /*
            var strUl= "<ul>";
             for(i=0; i<total;i++)
                 {   //innerHTML w3 nonstandard
@@ -174,18 +176,20 @@
                 strUl += "<li>" +alABBR[i].innerHTML+ "</li>";
                 }
                strUl += "</ul>"; 
+               */
+              var ul =document.createElement('UL');
                for(i=0;i<total;i++)
                {
-               var cont = document.createTextNode('alABBR[i].innerHTML');
+               var cont = document.createTextNode(alABBR[i].innerHTML);
                var li =document.createElement('LI');
-               li.appendChild(alABBR[i].innerHTML);
-               var ul =document.createElement('UL');
+               li.appendChild(cont);
+               ul.appendChild(li);
                 }
-                document.getElementByTagName('BODY').appendChild();
+            document.getElementsByTagName('BODY')[0].appendChild(ul);
                 
              var zenSummary = document.getElementById('zen-summary');
              
-             zenSummary.innerHTML = strUl;
+             //zenSummary.innerHTML = strUl;
              console.log(zenSummary.innerHTML);
             //zenSummary.innerHTML = "<h1>Hello I have replaced you. </h1>";
             //zenSummary.setAttribute('style', 'background-color: green');
