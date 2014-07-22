@@ -38,14 +38,25 @@ var student = {
             email: 'bappa@ftfl.com',
             tools: {
                 laptop: false,
-                desktop:{
+                desktop: {
                     monitor: '17 inch',
                     CPU: 'Cori5'
-                        }
+                         }
                     }
-               }
+             };
 //way of accessing element
 console.log(student.tools.desktop.monitor);
-console.log(student['tools'] ['desktop'] ['cpu']);
+console.log(student['tools']['desktop']['CPU']);
 
+    //Defining Object using a Constructor Function
+    function Cars (make,model,year)
+    {
+     this.make = make;
+     this.model = model;
+     this.year =year;
+    }
+    
+    var myCar = new Cars("Eagle", "Talson", '1989');
+    console.log(typeof myCar);
+    console.log(myCar.make);
 </script>
