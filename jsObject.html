@@ -1,5 +1,14 @@
 <script>
 //Defining an object using Object
-var car = new Object();
-
+var Car = new Object();
+Car.name = 'Audi';
+Car.wheel = 4;
+Car.drive = function()
+            {
+                console.log('I am driving');
+            }
+;
+//using the car object
+console.log(Car.wheel);
+Car.drive();
 </script>
