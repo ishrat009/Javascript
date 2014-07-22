@@ -32,5 +32,20 @@ console.log(fruits['name']);
 console.log(fruits.satisfy());
 console.log(typeof fruits.satisfy());
 
+var student = {
+            name: 'bappa',
+            id: 'FTFL007',
+            email: 'bappa@ftfl.com',
+            tools: {
+                laptop: false,
+                desktop:{
+                    monitor: '17 inch',
+                    CPU: 'Cori5'
+                        }
+                    }
+               }
+//way of accessing element
+console.log(student.tools.desktop.monitor);
+console.log(student['tools'] ['desktop'] ['cpu']);
 
 </script>
