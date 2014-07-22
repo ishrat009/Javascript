@@ -163,7 +163,11 @@
     {
         try {
            var alABBR = window.document.getElementsByTagName('abbr');
-            console.log(alABBR);
+           var total = alABBR.length;
+            for(i=0; i<total;i++)
+                {
+                    console.log(alABBR[i].innerHTML);
+                }
             }
         catch(error)
             {
