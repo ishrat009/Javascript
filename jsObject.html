@@ -14,8 +14,20 @@ Car.drive();
 console.log(typeof Car);
 
 //Object Literal
-var fruits = {};
-
+//var fruits = {};
+var fruits = {
+        name: 'apple',
+        color: 'red',
+        taste: 'sweet',
+        
+        satisfy: function()
+                {
+                    console.log('Satisfy hunger');
+                    return 'return'; // type string
+                }
+            };
 console.log(typeof fruits);
-
+console.log(fruits.name);
+console.log(fruits.satisfy());
+console.log(typeof fruits.satisfy());
 </script>
