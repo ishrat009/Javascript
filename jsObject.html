@@ -55,23 +55,31 @@
      this.model = model;
      this.year =year;
      //defining Object Method internally
-     this.drive= function()
-                    {
-                        return "I'm driving "+ this.make;
-                    };
+     this.drive= drive;
     };
     //defining Object Method externally
-    /*function drive()
+    function drive()
                     {
                         return "I'm driving "+ this.make;
-                    }*/ 
+                    }
+                    
+    document.write(drive());               
     var myCar = new Cars("Eagle", "Talson", '1989');
     var myCar2 = new Cars("Mazda", "Misamisa", '2008');
     console.log(typeof myCar);
-    console.log(myCar.make);
-    console.log(myCar2.make);
+    console.log(myCar.make); //this refers to myCar
+    console.log(myCar2.make); //this refers to myCar2
     console.log(myCar2.drive());
   
-   //defining Object using Object.create() 
+   var aCar = Car;
+   var bCar = Car;
+  
+    aCar.run = function()
+            {
+               alert('I am running');
+            };
+    //console.log(aCar.run());        
+   
+   //defining Object using Object.create() method 
     
 </script>
