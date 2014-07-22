@@ -152,8 +152,8 @@
   console.log(add());
 
 //default return from a function
-var aSampleFunction = function()
-{    
-};
+//self executing
+//injecting semicolon automatically
+; (function(){alert('hello')})();
 console.log(aSampleFunction);
 </script>
