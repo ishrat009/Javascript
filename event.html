@@ -37,10 +37,16 @@
         
         <form>
         Full Name: <input id='fullName' name='fullName'/> <br/><br/>
-        <button name='btnToClick' onclick="alert('Button clicked.')"> Click Me </button>
+        <button name='btnToClick' onclick="return validateName()"> Click Me </button>
         </form>
         
         <script>
+            function validateName(){
+                var fullName = document.getElementById('fullName').value;
+                alert(fullName);
+                return false;
+            }
+            
             ;(function(){
                 
             })();
