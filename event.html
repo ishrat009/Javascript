@@ -1,3 +1,4 @@
+<!doctype HTML>
 <html>
     <head>
         <title>Understanding Event & Event Handler Registration </title> 
@@ -22,7 +23,7 @@
         </div>
 
         <div>
-            <img id='imagePlaceholder' alt="koala" src="Image/Koala.jpg" width="200" height="100"/>
+            <img id='imagePlaceholder' alt="koala" src="Image/Koala.jpg" width="300" height="200"/>
             <!--
             <img alt="Lighthouse" src="Image/Lighthouse.jpg" width="200" height="100"/>
             <img alt="Tulips" src="Image/Tulips.jpg" width="200" height="100"/>
@@ -30,10 +31,10 @@
         </div>
         
         <nav role="navigation">
-          <ul>
-          <li><a href="#" onclick="loadImage('koala')">Koala</a></li>					
-          <li><a href="#" onclick="loadImage('Lighthouse')">Lighthouse</a></li>
-          <li><a href="#" onclick="loadImage('Tulips')">Tulips</a></li>					
+          <ul id = galleryNavigator >
+          <li><a href="#" >Koala</a></li>					
+          <li><a href="#" >Lighthouse</a></li>
+          <li><a href="#" >Tulips</a></li>					
            </ul>
         </nav>
         
@@ -44,11 +45,12 @@
         
         <script>
             
-            function loadImage(imgName)
+            function loadImage(evt)
             {
-                var imgph = document.getElementById('imagePlaceholder');
-                imgph.setAttribute('src','Image/'+imgName+'.jpg');
-                //alert('LoadImage');
+                //var imgph = document.getElementById('imagePlaceholder');
+                //imgph.setAttribute('src','Image/'+imgName+'.jpg');
+                alert(this.id);
+                evt.preventDefault();
             }
             
             function validateName(evt)
@@ -75,7 +77,16 @@
             {
             var btn = document.getElementById('btnToClick');  
             btnToClick.addEventListener('click',validateName,false);
+            
+            var galleryNavigator = document.getElementById('gallery');
+            var lis = galleryNavigator.getElementsByTagName('LI')[0];;
+            for(i=0; i<=lis.length; i++)
+            {
+                var anchor = lis[i].getElementsByTagName('a')[0];
+                anchor.addEventListener('click',loadImage,false);
+            }
             })();
+            
             
             
         </script>   
