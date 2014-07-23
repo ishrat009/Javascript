@@ -47,12 +47,13 @@
                 if(fullName=="")
                     {    
                     alert('Enter your full Name');
-                    return true;
+                    preventDefault();
+                    return false;
                     }
                 else
                     {
                         alert("Thank you "+fullName+" for entering your name!");
-                        return false;
+                        return true;
                     }
             }   
             
