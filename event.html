@@ -22,16 +22,18 @@
         </div>
 
         <div>
-            <img alt="koala" src="Image/Koala.jpg" width="200" height="100"/>
+            <img id='imagePlaceholder' alt="koala" src="Image/Koala.jpg" width="200" height="100"/>
+            <!--
             <img alt="Lighthouse" src="Image/Lighthouse.jpg" width="200" height="100"/>
             <img alt="Tulips" src="Image/Tulips.jpg" width="200" height="100"/>
+            -->
         </div>
         
         <nav role="navigation">
           <ul>
-          <li><a href="http://www.google.com" onclick="alert('This link is clicked')">Koala</a></li>					
-          <li><a href="#" >Lighthouse</a></li>
-          <li><a href="#" >Tulips</a></li>					
+          <li><a href="#" onclick="loadImage('koala')">Koala</a></li>					
+          <li><a href="#" onclick="loadImage('Lighthouse')">Lighthouse</a></li>
+          <li><a href="#" onclick="loadImage('Tulips')">Tulips</a></li>					
            </ul>
         </nav>
         
@@ -41,11 +43,19 @@
         </form>
         
         <script>
+            
+            function loadImage(imgName)
+            {
+                var imgph = document.getElementById('imagePlaceholder');
+                imgph.setAttribute('src','Image/'+imgName+'.jpg');
+                //alert('LoadImage');
+            }
+            
             function validateName(evt)
             {
-            console.log(evt);
-            console.log(typeof evt);
-            console.log(evt.target);
+            //console.log(evt);
+            //console.log(typeof evt);
+            //console.log(evt.target);
  
              var fullName = document.getElementById('fullName').value;
                 if(fullName=="")
