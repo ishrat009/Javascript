@@ -41,13 +41,17 @@
         </form>
         
         <script>
-            function validateName()
+            function validateName(evt)
             {
+            console.log(evt);
+            console.log(typeof evt);
+            console.log(evt.target);
+ 
              var fullName = document.getElementById('fullName').value;
                 if(fullName=="")
                     {    
                     alert('Enter your full Name');
-                    preventDefault();
+                    evt.preventDefault();
                     return false;
                     }
                 else
