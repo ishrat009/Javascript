@@ -43,8 +43,16 @@
         <script>
             function validateName(){
                 var fullName = document.getElementById('fullName').value;
-                alert(fullName);
+            if(fullName == "")
+            {    
+            alert('Enter your full Name');
+            return true;
+            }
+            else{
+                alert("Thank you "+fullName+" for entering your name!");
                 return false;
+            }
+                //return false;
             }
             
             ;(function(){
