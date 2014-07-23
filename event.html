@@ -1,14 +1,24 @@
 <html>
     <head>
         <title>Understanding Event & Event Handler Registration </title> 
+        <style>
+            img{
+                display: none;
+            }
+            img[alt='koala']{
+                display: block;
+            }
+        </style>
+        
     </head>
     
     <body>
-
-        <div role="attribute">
+        <div role="article">
                 <h3 onclick="alert('Hi, Im learning event.')"> So What is This About?</h3>
-                <p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The <abbr title="HyperText Markup Language">HTML</abbr> remains the same, the only thing that has changed is the external <abbr title="Cascading Style Sheets">CSS</abbr> file. Yes, really.</p>
-                <p><abbr title="Cascading Style Sheets">CSS</abbr> allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
+                <p>There is a continuing need to show the power of 
+                    <abbr title="Cascading Style Sheets">CSS</abbr>. 
+                    The Zen Garden aims to excite, inspire, and encourage participation. 
+                    
         </div>
 
         <div>
@@ -19,17 +29,16 @@
         
         <nav role="navigation">
           <ul>
-            <li><a href="#" class="design-name">Mid Century Modern</a> by						<a href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
-            </li>					
-            <li><a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>
-            </li>
-            <li><a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
-            </li>					
+          <li><a href="http://www.google.com" onclick="alert('This link is clicked')">Koala</a></li>					
+          <li><a href="#" >Lighthouse</a></li>
+          <li><a href="#" >Tulips</a></li>					
            </ul>
         </nav>
         
-        <button> Click Me </button>
-        
+        <form>
+        Full Name: <input id='fullName' name='fullName'/> <br/><br/>
+        <button name='btnToClick' onclick="alert('Button clicked.')"> Click Me </button>
+        </form>
         
         <script>
             ;(function(){
