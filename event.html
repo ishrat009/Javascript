@@ -22,7 +22,7 @@
                     
         </div>
 
-        <div>
+        <div id =gallery>
             <img id='imagePlaceholder' alt="koala" src="Image/Koala.jpg" width="300" height="200"/>
             <!--
             <img alt="Lighthouse" src="Image/Lighthouse.jpg" width="200" height="100"/>
@@ -32,9 +32,9 @@
         
         <nav role="navigation">
           <ul id = galleryNavigator >
-          <li><a href="#" >Koala</a></li>					
-          <li><a href="#" >Lighthouse</a></li>
-          <li><a href="#" >Tulips</a></li>					
+          <li><a href="Image/Koala.jpg" >Koala</a></li>					
+          <li><a href="Image/Lighthouse.jpg" >Lighthouse</a></li>
+          <li><a href="Image/Tulips.jpg" >Tulips</a></li>					
            </ul>
         </nav>
         
@@ -47,9 +47,13 @@
             
             function loadImage(evt)
             {
-                //var imgph = document.getElementById('imagePlaceholder');
-                //imgph.setAttribute('src','Image/'+imgName+'.jpg');
-                alert(this.id);
+                var imgph = document.getElementById('imagePlaceholder');
+                var imgPath = evt.target.href;
+                var imgName= imgPath.split('/')[imgPath.split('/')-1];
+                alert(imgPath);
+                imgph.setAttribute('src','Image/'+imgName+'.jpg');
+                console.log(evt.target.href);
+                //alert(this.id);
                 evt.preventDefault();
             }
             
