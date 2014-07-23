@@ -37,26 +37,29 @@
         
         <form>
         Full Name: <input id='fullName' name='fullName'/> <br/><br/>
-        <button name='btnToClick' onclick="return validateName()"> Click Me </button>
+        <button id='btn' name='btnToClick'> Click Me </button>
         </form>
         
         <script>
-            function validateName(){
-                var fullName = document.getElementById('fullName').value;
-            if(fullName == "")
-            {    
-            alert('Enter your full Name');
-            return true;
-            }
-            else{
-                alert("Thank you "+fullName+" for entering your name!");
-                return false;
-            }
-                //return false;
-            }
+            function validateName()
+            {
+             var fullName = document.getElementById('fullName').value;
+                if(fullName=="")
+                    {    
+                    alert('Enter your full Name');
+                    return true;
+                    }
+                else
+                    {
+                        alert("Thank you "+fullName+" for entering your name!");
+                        return false;
+                    }
+            }   
             
-            ;(function(){
-                
+            ;(function()
+            {
+            var btnToClick = document.getElementById('btnToClick');  
+            btnToClick.addEventListener('click',validateName,false);
             })();
             
             
