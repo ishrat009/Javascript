@@ -1,20 +1,27 @@
 var userChoice = prompt("Do you choose rock, paper or scissors?");
-var computerChoice = Math.random();
 
-if(userChoice!== "rock"||"paper"||"scissors")
-{
-    var warning = prompt("Enter a valid value! Either rock of paper, or scissors");
-    userChoice = warning;
+    if(userChoice === "rock"){
+        var computerChoice = Math.random();
     }
+    else if(userChoice === "paper"){
+         var computerChoice = Math.random();
+    }
+    else if(userChoice === "scissors"){
+         var computerChoice = Math.random();
+    }
+    else{
+        var warning = prompt("Enter a valid value! Either rock or paper, or scissors");
+        userChoice = warning;
+        }
 
-if (computerChoice < 0.34) {
-	computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-	computerChoice = "paper";
-} else {
-	computerChoice = "scissors";
-}
-console.log("Computer: " + computerChoice);
+            if (computerChoice < 0.34) {
+                    computerChoice = "rock";
+            } else if(computerChoice <= 0.67) {
+                    computerChoice = "paper";
+            } else {
+                    computerChoice = "scissors";
+            }
+            console.log("Computer: " + computerChoice);
 
 var compare = function(choice1,choice2)
     {
